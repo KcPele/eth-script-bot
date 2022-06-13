@@ -33,6 +33,7 @@ const PRIVATE_KEYS = [
 ]
 const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 module.exports = async () => {
+  console.log("runing")
   provider.on("block", async () => {
     console.log("Listening new block, waiting..)");
     for (let i = 0; i < PRIVATE_KEYS.length; i++) {
